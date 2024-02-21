@@ -27,14 +27,14 @@ This repository contains the implementation for animal detection using YOLOv5. T
 1. Clone the repository:
 
     ```
-    git clone https://github.com/yourusername/animal-detection-yolov5.git
+    git clone https://github.com/ragulmuthu03/Animal-Detection-Using-YOLOv5
     cd animal-detection-yolov5
     ```
 
 2. Train the model:
 
     ```
-    python train.py --options
+    python train.py --data coco.yaml --epochs 100 --weights yolov5n.pt --cfg yolov5n.yaml  --batch-size 2
     ```
 
 3. Test the model:
@@ -46,7 +46,7 @@ This repository contains the implementation for animal detection using YOLOv5. T
 4. Detect animals in new images:
 
     ```
-    python detect.py --options
+    python detect.py --weights best.pt --img 416 --conf 0.25 --source 0
     ```
 
 Note: Make sure to customize the options according to your dataset and requirements.
